@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Data Updated</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> <!-- Link to CSS file -->
+</head>
+<body>
+    <div class="container">
+        <h1>User Data Added Successfully</h1>
+
+        <div class="user-details">
+            <h2>Updated Details:</h2>
+            <p><strong>Name:</strong> {{ name }}</p>
+            <p><strong>Phone Number:</strong> {{ phone_number }}</p>
+            <p><strong>IP Address:</strong> {{ ip_address }}</p>
+            <p><strong>Date:</strong> {{ date }}</p>
+            <p><strong>Foundation Number:</strong> {{ foundation_number }}</p>
+        </div>
+
+        <a href="/" class="btn">Go Back to Home</a>
+    </div>
+</body>
+</html>

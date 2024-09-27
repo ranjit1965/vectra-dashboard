@@ -1,0 +1,113 @@
+/* General Styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #6dd5fa, #2980b9); /* Gradient background */
+    color: #333;
+    min-height: 100vh;
+}
+
+.navbar {
+    position: fixed;
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#img1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 120px; /* Increased size from 70px to 100px */
+    margin: 50px;
+}
+
+#img2 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 120px; /* Increased size from 70px to 100px */
+    margin: 50px;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 140px); /* Adjust for navbar height */
+}
+
+.form-container {
+    background-color: rgba(255, 255, 255, 0.9); /* Transparent background */
+    padding: 40px 50px;
+    width: 350px;
+    border-radius: 15px;
+    border: 2px solid #2980b9; /* Separate border for form */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.form-container h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #2980b9; /* Accent color */
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.form-group input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+.form-group input[type="text"]:focus {
+    border-color: #2980b9;
+    box-shadow: 0 0 8px rgba(41, 128, 185, 0.4);
+    outline: none;
+}
+
+.btn-container {
+    margin-top: 20px;
+}
+
+.submit-btn {
+    padding: 12px 25px;
+    background-color: #2980b9;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submit-btn:hover {
+    background-color: #21618c;
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .form-container {
+        width: 90%;
+        padding: 20px;
+    }
+}

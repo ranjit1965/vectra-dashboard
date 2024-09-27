@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width==device-width, initial-scale=1.0">
+    <title>Vectra Login</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/login.css') }}">
+    <style>
+        .navbar{
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+    </head>
+    <body>
+        <form method="post" action="add_user_data">
+    <div class="navbar">
+      <img id="img1" src="{{ url_for('static', filename='images/logo1.jpg') }}" alt="Logo 1"> 
+      
+      
+      <div>
+        <img id="img2" src="{{ url_for('static', filename='images/logo2.jpeg') }}" alt="Logo 2">
+      </div>
+  </div>
+     
+    <section>
+      
+        <div class="container">
+
+          <form id="myForm">
+
+            <div class=" step step-1 active" id="formCont">
+
+              <div class="form-group" id="Name">
+                <label for="Name" id="nameLab">Name</label>
+                <input type="text" id="Name" name="Name">
+              </div>
+
+              <div class="form-group">
+                <label for="Phonenumber">PhoneNumber</label>
+                <input type="tel" id="Phonenumber"  name="Phonenumber" > <br> <br>
+              </div>
+
+              <div class="form-group">
+                <label for="IPAddress">IPAddress</label>
+                <input type="text" id="IPAddress" name="IPAddress">
+                
+                
+     
+              </div>
+
+              <div class="form-group">
+                <label for="email">Date</label>
+                <input type="date" id="Date" name="Date">
+              </div>
+
+              <div class="form-group">
+                <label for="phone">Foundation number</label>
+                <input type="text" id="Foundationnumber" name="Foundationnumber">
+              </div>
+              <div class="btn">
+                <button type="reset" class="clear-btn">Clear</button>
+              </div>
+              
+              <div class="btn">
+                <button type="submit" class="submit-btn">Submit</button>
+              </div>
+              
+
+            </div>
+          </form>
+        </div>
+    </section>
+    
+</body>
+</html>

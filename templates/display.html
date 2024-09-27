@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Database Details</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    
+</head>
+<body>
+    <h1>List of Users</h1>
+    <div class="user-list">
+        {% if data %}
+            {% for user in data %}
+            <div class="user-card">
+                <h2>{{ user['name'] }}</h2>
+                <div class="user-info">
+                    <p><strong>Phone Number:</strong> {{ user['phone_number'] }}</p>
+                    <p><strong>IP Address:</strong> {{ user['ip_address'] }}</p>
+                    <p><strong>Date:</strong> {{ user['date'] }}</p>
+                    <p><strong>Foundation Number:</strong> {{ user['foundation_number'] }}</p>
+                </div>
+            </div>
+            {% endfor %}
+        {% else %}
+        <p class="no-data">No users to display.</p>
+        {% endif %}
+    </div>
+</body>
+</html>
+

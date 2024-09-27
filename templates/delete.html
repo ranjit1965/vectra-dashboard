@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete User</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/delete.css') }}">
+</head>
+<body>
+    <div class="navbar">
+        <img id="img1" src="{{ url_for('static', filename='images/logo1.jpg') }}" alt="Logo 1"> 
+        <img id="img2" src="{{ url_for('static', filename='images/logo2.jpeg') }}" alt="Logo 2">
+    </div>
+
+    <section>
+        <div class="form-container">
+            <h1>Delete User Data</h1>
+            <form method="post" action="{{ url_for('delete_user_data') }}">
+                <div class="form-group">
+                    <label for="Name">User Name:</label>
+                    <input type="text" id="Name" name="Name" required placeholder="Enter the username">
+                </div>
+                
+                <div class="btn-container">
+                    <button type="submit" class="submit-btn">Delete</button>
+                </div>
+            </form>
+        </div>
+    </section>
+</body>
+</html>

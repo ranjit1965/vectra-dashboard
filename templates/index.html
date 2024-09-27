@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vectra Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/login.css') }}">
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f6f9;
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Navbar Styling */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #007bff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Logo Styling */
+        #img1, #img2 {
+            height: 70px;
+        }
+
+        /* Navigation Links Styling */
+        .navItems {
+            list-style-type: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .navItems li {
+            display: inline-block;
+        }
+
+        .navItems li a {
+            text-decoration: none;
+            font-size: 18px;
+            color: #fff;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .navItems li a:hover {
+            background-color: #0056b3;
+        }
+
+        /* Footer or Page content styling */
+        .content {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .content h1 {
+            font-size: 36px;
+            color: #333;
+        }
+
+        .content p {
+            font-size: 18px;
+            color: #666;
+            margin-top: 10px;
+        }
+
+        /* Media Queries for Responsive Design */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            #img1, #img2 {
+                height: 40px;
+            }
+
+            .navItems {
+                width: 100%;
+                justify-content: center;
+                margin-top: 10px;
+            }
+
+            .navItems li {
+                margin: 5px 0;
+            }
+
+            .content h1 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar with logo and navigation links -->
+    <div class="navbar">
+        <!-- Left Logo -->
+        <img id="img1" src="{{ url_for('static', filename='images/logo1.jpg') }}" alt="Logo 1">
+
+        <!-- Navigation Links -->
+        <ul class="navItems">
+            <li><a class="nav-link1" href="{{ url_for('add_page') }}">Add</a></li>
+            <li><a class="nav-link2" href="{{ url_for('edit_page') }}">Edit</a></li>
+            <li><a class="nav-link3" href="{{ url_for('delete_page') }}">Delete</a></li>
+            <li><a class="nav-link4" href="{{ url_for('display_users')}}">Display</a></li>
+        </ul>
+
+        <!-- Right Logo -->
+        <img id="img2" src="{{ url_for('static', filename='images/logo2.jpeg') }}" alt="Logo 2">
+    </div>
+
+    <!-- Page Content -->
+    <div class="content">
+        <div>
+            <h1>Welcome to Vectra Dashboard</h1>
+            <p></p>
+        </div>
+    </div>
+</body>
+</html>
